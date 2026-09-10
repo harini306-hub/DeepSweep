@@ -56,7 +56,7 @@ export default function Dashboard({ onNavigate }: DashboardProps) {
       <div className="max-w-7xl mx-auto">
         {/* Welcome */}
         <div className="mb-8">
-          <h1 className="font-display font-bold text-2xl mb-1">Welcome back, Dr. Rivera</h1>
+          <h1 className="font-display font-bold text-2xl mb-1">Welcome back, Miss. Harini</h1>
           <p className="text-slate-500 text-sm">Here's your detection activity overview for September 2026.</p>
         </div>
 
