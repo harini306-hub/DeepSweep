@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+html,
+body,
+#root {
+  height: 100%;
+  background: #050D17;
+  color: #E2F0FF;
+}
+
+@theme inline {
+  --color-navy-950: #050D17;
+  --color-navy-900: #0A1929;
+  --color-navy-800: #0D2436;
+  --color-navy-700: #112F47;
+  --color-navy-600: #163958;
+  --color-cyan-glow: #22D3EE;
+  --color-cyan-bright: #00D9FF;
+  --color-coral: #FF4D4D;
+  --color-emerald-debris: #34D399;
+  --color-amber-warn: #FBBF24;
+
+  --font-display: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #163958 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #163958;
+  border-radius: 4px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-mono-data {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Sonar pulse animation */
+@keyframes sonar-pulse {
+  0% { transform: scale(0.5); opacity: 0.8; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+@keyframes sonar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes scan-line {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bbox-appear {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 12px 2px rgba(34, 211, 238, 0.3); }
+  50% { box-shadow: 0 0 24px 6px rgba(34, 211, 238, 0.6); }
+}
+
+@keyframes float-up {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-sonar-pulse {
+  animation: sonar-pulse 3s ease-out infinite;
+}
+
+.animate-sonar-sweep {
+  animation: sonar-sweep 4s linear infinite;
+}
+
+.animate-scan-line {
+  animation: scan-line 2.5s ease-in-out infinite alternate;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease both;
+}
+
+.animate-bbox {
+  animation: bbox-appear 0.4s ease both;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float-up 4s ease-in-out infinite;
+}
+
+/* Glassmorphism panel */
+.glass-panel {
+  background: rgba(13, 36, 54, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(34, 211, 238, 0.12);
+}
+
+.glass-panel-light {
+  background: rgba(13, 36, 54, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(34, 211, 238, 0.08);
+}
+
+/* Cyan glow shadow on hover */
+.hover-glow {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 24px 4px rgba(34, 211, 238, 0.18), 0 8px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Nav active cyan border */
+.nav-active {
+  border-left: 3px solid #22D3EE;
+  background: rgba(34, 211, 238, 0.07);
+}
+
+/* Cyan gradient text */
+.text-cyan-gradient {
+  background: linear-gradient(135deg, #22D3EE, #00D9FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Page gradient background */
+.page-bg {
+  background: linear-gradient(135deg, #050D17 0%, #0A1929 60%, #050D17 100%);
+  min-height: 100%;
+}
+
+/* Recharts custom styles */
+.recharts-cartesian-grid line {
+  stroke: rgba(34, 211, 238, 0.08) !important;
+}
