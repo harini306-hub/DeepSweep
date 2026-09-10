@@ -1,0 +1,8 @@
+{
+  "title": "DeepSweep",
+  "description": "AI-powered underwater sonar analysis and detection.",
+  "language": "en",
+  "robots": {
+    "index": true
+  }
+}
